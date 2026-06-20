@@ -52,34 +52,7 @@ docker-compose up
 # API at http://localhost:80
 ```
 
-## Run Tests
-```bash
-cd app
-npm install
-npm test
-```
 
-## Deploy to Railway (Free)
-
-1. Go to [railway.app](https://railway.app) → login with GitHub
-2. Click **New Project → Deploy from GitHub repo**
-3. Select `cloudpipe` repository
-4. Railway auto-detects Dockerfile and deploys
-5. Get your free URL like `cloudpipe.up.railway.app`
-
-## CI/CD Setup (GitHub Actions)
-
-Add these secrets to your GitHub repo (Settings → Secrets):
-- `DOCKERHUB_USERNAME` — your DockerHub username
-- `DOCKERHUB_TOKEN` — DockerHub access token (Settings → Security)
-- `RAILWAY_TOKEN` — Railway token (Railway dashboard → Account Settings)
-
-Every push to `main` will automatically:
-1. ✅ Run all Jest tests
-2. ✅ Build Docker image
-3. ✅ Push to DockerHub
-4. ✅ Deploy to Railway
-5. ✅ Verify health check
 
 ## AWS Infrastructure (Terraform)
 
@@ -96,13 +69,7 @@ terraform plan
 terraform apply
 ```
 
-## Monitoring Setup
 
-Run `scripts/setup_monitoring.sh` for UptimeRobot setup instructions. Free monitoring with:
-- 5-minute check intervals
-- Email alerts on downtime
-- Public status page
-- Response time graphs
 
 ## Project Structure
 ```
